@@ -1,0 +1,22 @@
+name: CI Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+      - run: pip install -r dev-requirements.txt
+      - run: flake8 .
+      - run: black --check --diff .
+      - run: mypy --ignore-missing-imports .
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+      - run: pip install -r requirements.txt
+      - run: pytest -v
