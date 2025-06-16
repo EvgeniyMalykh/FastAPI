@@ -76,7 +76,8 @@ def create_app():
             return (
                 jsonify(
                     {
-                        "error": "Поля address, count_places и count_available_places обязательны"
+                        "error": "Поля address, count_places "
+                        "и count_available_places обязательны"
                     }
                 ),
                 400,
@@ -86,7 +87,8 @@ def create_app():
             return (
                 jsonify(
                     {
-                        "error": "count_available_places не может быть больше count_places"
+                        "error": "count_available_places "
+                        "не может быть больше count_places"
                     }
                 ),
                 400,
@@ -169,7 +171,8 @@ def create_app():
             return (
                 jsonify(
                     {
-                        "error": "У клиента не привязана кредитная карта, оплата невозможна"
+                        "error": "У клиента не привязана "
+                        "кредитная карта, оплата невозможна"
                     }
                 ),
                 400,
