@@ -196,7 +196,7 @@ def create_app():
     return app
 
 
-class Client(db.Model):
+class Client(db.Model):  # type: ignore[name-defined]
     __tablename__ = "client"
 
     id = db.Column(db.Integer, primary_key=True, nullable=False)
