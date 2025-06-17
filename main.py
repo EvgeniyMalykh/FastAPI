@@ -195,6 +195,10 @@ def create_app():
 
     return app
 
+def test_dummy():
+    assert True
+
+
 
 class Client(db.Model):  # type: ignore[name-defined]
     __tablename__ = "client"
