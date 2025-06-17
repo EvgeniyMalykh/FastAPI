@@ -208,7 +208,7 @@ class Client(db.Model):  # type: ignore[name-defined]
     parkings = db.relationship("ClientParking", back_populates="client")
 
 
-class Parking(db.Model):
+class Parking(db.Model):  # type: ignore[name-defined]
     __tablename__ = "parking"
 
     id = db.Column(db.Integer, primary_key=True, nullable=False)
@@ -220,7 +220,7 @@ class Parking(db.Model):
     clients = db.relationship("ClientParking", back_populates="parking")
 
 
-class ClientParking(db.Model):
+class ClientParking(db.Model):  # type: ignore[name-defined]
     __tablename__ = "client_parking"
 
     id = db.Column(db.Integer, primary_key=True, nullable=False)
