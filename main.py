@@ -1,11 +1,9 @@
 from flask import Flask, request, jsonify
 from datetime import datetime
-
-# from extensions import db
 from flask_sqlalchemy import SQLAlchemy
 
-db = SQLAlchemy()
 
+db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)
